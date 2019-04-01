@@ -1,0 +1,10 @@
+.custom-button {
+  padding: 10px;
+}
+.custom-button:hover {
+  background-color: rgba(0,123,255,.5);
+}
+.left-panel {
+  background-color: 'rgba(0,123,255,.5)';
+  color: 'white';
+}

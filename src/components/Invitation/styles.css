@@ -1,0 +1,17 @@
+.invitation-container {
+ width: 100vw;
+ height: 100vh;
+ background-color: chartreuse;
+ flex-direction: column;
+ display: flex;
+ align-items: center;
+}
+.invitation-container .inv-form {
+ background-color: white; 
+ align-items: center;
+ box-shadow: 4px 3px 12px 4px #5cb547;
+ flex-direction: column;
+ display: flex;
+ margin: 50px;
+ padding: 50px;
+ }

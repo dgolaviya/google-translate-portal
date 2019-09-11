@@ -42,19 +42,19 @@ class AddMessageForm extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
   onMessageAdd = (event) => {
-    console.log(this.state);
     event.preventDefault();
     const form = event.currentTarget;
-    this.setState({ validated: true });
+    const message = {
+      en: this.state.en,
+      fr: this.state.fr,
+      de: this.state.de,
+      zh: this.state.zh,
+      es: this.state.es,
+      msgId: this.state.msgId
+    };
+    this.setState({ en: undefined, msgId: undefined });
+    console.log(this.state);
     if (form.checkValidity()) {
-      const message = {
-        en: this.state.en,
-        fr: this.state.fr,
-        de: this.state.de,
-        zh: this.state.zh,
-        es: this.state.es,
-        msgId: this.state.msgId
-      };
       axios.post('http://localhost:8050/messages/', message).then(res => {
         this.props.addNewMessage(res.data);
       });
